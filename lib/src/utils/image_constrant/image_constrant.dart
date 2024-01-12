@@ -1,0 +1,1 @@
+const String splashImage = 'assets/aichat.png';
