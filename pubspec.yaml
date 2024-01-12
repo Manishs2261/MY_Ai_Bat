@@ -15,6 +15,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.6
   connectivity_plus: ^5.0.2
+  # Lottie animation in the simplest way.
+  lottie: ^3.0.0
 
 dev_dependencies:
   flutter_test:
