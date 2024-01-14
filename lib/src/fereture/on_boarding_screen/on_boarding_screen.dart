@@ -11,7 +11,6 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final pageController = PageController();
 
     final list = [
@@ -27,7 +26,7 @@ class OnBoardingScreen extends StatelessWidget {
 
     return Scaffold(
         body: PageView.builder(
-          controller: pageController,
+            controller: pageController,
             itemCount: list.length,
             itemBuilder: (context, index) {
               return Column(
@@ -61,14 +60,10 @@ class OnBoardingScreen extends StatelessWidget {
                   Spacer(),
                   ElevatedButton(
                       onPressed: () {
-                        if(index == list.length - 1 ){
-
-
-                          Get.to(HomePage());
-
-                        }else{
+                        if (index == list.length - 1) {
+                          Get.off(HomePage());
+                        } else {
                           pageController.nextPage(duration: Duration(microseconds: 600), curve: Curves.ease);
-
                         }
                       },
                       style: ElevatedButton.styleFrom(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mychatai/src/fereture/home_page/home_page.dart';
 import 'package:mychatai/src/fereture/on_boarding_screen/on_boarding_screen.dart';
 import 'package:mychatai/src/utils/helper/helper_class.dart';
+import 'package:mychatai/src/utils/helper/pref.dart';
 import 'package:mychatai/src/utils/image_constrant/image_constrant.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
 
     Future.delayed(Duration(seconds: 2),(){
-       Get.to(OnBoardingScreen());
+       Get.off(Pref.showOnBoarding ? OnBoardingScreen() : HomePage());
     });
     super.initState();
   }
